@@ -1,0 +1,191 @@
+Day - 1: ES6
+-------------
+- let, const, var
+- arrow functions
+- rest parameter
+- spread operator
+- destructuring
+- template literals
+- classes
+- promises
+- async/await
+- es modules
+Variable:
+---------
+- A variable is a literal assigned to identifier
+  x = 10
+  console.log(x)
+  - js is untyped
+- 3 ways to declare a variable
+  using var, let, const
+
+using var:
+----------
+- only construct available for defining
+  variables 
+  var x = 10;
+  var a;
+  console.log(a); // undefined
+  name; // error
+- scope 
+  1: A variable initialized with var outside
+     of any function is assigned to global
+	 object, and the scope of this is global 
+	 scope
+  2: a variables initialized with var inside a
+     function is assigned to function then the 
+	 scope of this variable is function scope
+	 
+  3: any variable defined inside a block does not 
+     create block scope then the scope this variable
+	 is function scope
+
+using let:
+----------	 
+- new feature in ES6
+- it's scope is limited to the block, statement
+  and expression
+  let name = "nagaraju setti"
+- in any modern apps, choose let to define
+  variables
+
+using const:
+------------
+- new feature in ES6
+- used to define constants
+- it's scope is limited to the block, statement and
+  expression
+- scope const is same as let
+
+Arrow functions:
+----------------
+- introduced in ES6/ES2015
+- var myFun = function() {// statements}
+- var myFun = ()=>{// statements}
+- single parameter no brackets(paranthesis) 
+  are not required
+- single line inside a arrow function then
+  no braces are required
+  
+- var myfun = function() {
+              return "hello"}  
+- implicit return 
+  - values are returned without return keyword
+  
+rest parameter:
+---------------
+- ...arg
+- rest parameter must be last parameter
+- packing elements into an array
+
+spread operator:
+----------------
+- ...arg
+- let newObj = {...olbObj}
+- let msg = "hello";
+  let wish = [...msg] // 
+  console.log(wish)
+
+destructuring:
+-------------
+- feature in es6
+- extracting values from array or object and 
+  putting them into named variables
+  ex:
+   let person  = { name: 'naga', city: 'hyd'}
+   let pname = person.name
+   let city = person.city;
+   
+   let {name: pname, city} = person
+   
+  ex:
+   let ns = [1, 2, 3, 4,5]
+   let [a, b] = ns; 
+
+ let products = [
+ {id: 1, name: 'apple'},
+ {id: 1, name: 'apple'}
+ ]   
+ 
+ let [p1, p2] = products;
+ console.log(p1.name + p1.id)
+
+template literals:
+------------------
+- let lines = "this is my first line
+               my second line
+			   my third line"
+- we use backticks in our template 
+- we can define multiline strings
+- interpolate variables and expressions in string
+
+classes:
+--------
+- class
+- function Person() {}
+  new Person();
+Promises:
+---------
+- way to deal with asyncrhonous code
+- avoid writing too many callbacks in code
+- asynchronous functions use promises api
+- once the promise is called, it will start in 
+  pending state. that means the caller function 
+  continous the execution
+- returns resolved state or rejected state 
+- Fetch API use promises
+- create promise 
+- consume promise
+
+async/await:
+------------
+- async/await built on promises
+
+summary:
+--------
+- let, const, var
+- arrow functions
+- rest and spread
+- destructuring
+- template literals
+- classes
+- setters & getters
+- promises
+- async/await  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+

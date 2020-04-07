@@ -1,0 +1,224 @@
+Day - 2:
+--------
+es modules
+React JS
+
+react is just v in MVC, angular is mvc 
+
+React features:
+---------------
+- what is react
+- single page application
+- immutabliity
+- purity
+- virtual dom
+- unidirectional data flow
+- declarative
+- how to install react
+ 
+- js library
+- from facebook 2013 
+- UI
+- v in MVC
+- component
+- state
+- props
+- JSX
+
+singple page application:
+--------------------------
+- index.html
+- google maps
+- gmail
+- facebook
+- drive
+- twitter
+
+- much faster than tradition web apps
+- react router
+
+
+declarative:
+------------
+demo.html
+<html>
+<p id="para">hai</p>
+
+Real DOM:
+---------
+<my-date></my-date>
+onclick
+onsubmit
+
+
+we never interact with actual DOM
+
+immutabliity:
+-------------
+- immutable variable can never be changed
+- Strng name = 'naga'
+  name = name.toUppercase()// 
+  s.o.p(name)
+  
+- w.r.t objects and arrays
+  let person = {id: 1, name: 'naga'}
+  person.name = "nagaraju setti"
+  let p = person;
+- we should never mutate state directly, 
+  mutate state only through setState({name: 'nagaraju setti'})  
+  
+- Redux state can be modified only through
+  reducers
+- mutations are centralized, improving debugging
+  capabilities
+- code looks cleaner and simpler to understand
+
+Purity:
+-------
+- pure function or pure component
+- A react component is a pure component when 
+  its output in only dependant on its props
+- all functional components are pure components  
+
+Virtual DOM:
+------------
+DOM: (Document Object Model)
+----
+- a tree representation of the page
+- <html> is called as node
+
+React keeps a copy of the DOM
+
+- browser two operations: repaint and reflow
+
+index.html:
+<html>
+<p>hai</p>
+<div>boss</div>
+</html>
+
+DOM:
+html
+ p
+   hai, good evening
+ div
+  boss
+  
+index.html:
+<html>
+<p>hai, good evening</p>
+<div>boss</div>
+</html> 
+
+virtual dom:
+-------------
+html
+  p
+   hai, good evening
+  div 
+   boss
+
+- react is going to apply changes and performs
+  unique update to the real DOM, by changing
+  elements that need to be changed at run time
+  
+Unidirectional data flow:
+-------------------------
+- one way data flow means:
+1. state is passed to the view and to child comp from parent
+2. actions are triggered by that view
+3. actions are going to update state
+4. state change is passed to the view
+
+how to install react js:
+------------------------
+> node js
+> create-react-app
+
+react.development.js
+react-dom.js
+babel.js
+
+- transpiling will happen at build time
+- webpack 
+
+.babelrc
+
+yarn
+
+
+npm tool
+
+all modules from centerl repository 
+maven
+
+npm start:
+
+create-react-app added a few other commands
+build: to build react app files in the build 
+      folder 
+	  npm build 
+test: to run testing suite
+      npm test
+eject: to eject from create-react-app
+       npm eject	  
+
+
+Webpack:
+--------
+- is a tool that will compile our js modules
+
+- react features
+- what is react
+- create-react-app
+- our first react app
+- project directory structure
+- babal
+
+webpack
+jsx
+	  
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
