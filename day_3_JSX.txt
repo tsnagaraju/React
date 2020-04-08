@@ -1,0 +1,182 @@
+Day - 3:
+--------
+- webpack
+- jsx
+- component
+
+Webpack:
+--------
+- webpack a tool 
+- module bundler
+- bundle our resources
+- watches for changes and re-runs the tasks
+- will run babel 
+- can run development server
+
+
+JSX: (JavaScript eXtension) (JavaScript for Xml)
+----
+JSX = JS + HTML
+.js can have jsx in it
+.jsx contains jsx code in it
+
+class ----> className
+for   ----> htmlFor
+
+<label for="username">User</label>
+<label htmlFor="username">User</label>
+
+<div>
+<p>hai</p>
+<span>hello</span>
+<my-date/>
+<app/>
+</div>
+
+- react component can return only a single node
+
+function doSum() {
+ return a + b;
+ return b + a;
+} 
+
+ReactDOM.render(what, where)
+- what you are going to render
+- where you are goint to render it
+
+
+Transpiling JSX:
+----------------
+- jsx code transformed to regular js this 
+  process is called transpiling
+
+- jsx:
+   function App() {
+     return (
+          <div >
+      <h1>React App</h1>
+      <p>Hai, good afternoon</p>
+    </div> 
+  ) 
+}
+
+- js 
+  React.DOM.div(null, 
+         React.DOM.h1(null, 'React App'),
+         React.DOM.p(null, 'Hai, good afternoon')
+  )		 
+
+JS in JSX:
+----------
+- { }
+- expression to bind dynamic data to my jsx
+
+HTML in JSX:
+------------
+- JSX
+- <br/>
+
+camelCase is the new standard
+class -> className
+onchange -> onChange
+onclick  -> onClick
+onsubmit -> onSubmit
+
+
+CSS in JSX:
+-----------
+- using external css
+.css -> demo.css 
+  import './demo.css'
+  
+- inline style
+  use style attribute  to add style
+  1. property names are camelCased
+  2. value are just strings
+  3. seperate each property with comma
+  
+Forms in JSX:
+-------------
+- value and defaultValue
+- holds current value of the field
+- defaultValue attribute holds default value
+<input defaultValue=""/>
+
+<textarea defaultValue=""/>
+
+<select defaultValue=""/>
+
+JSX auto escapes:
+-----------------
+1. <div>&copy;2020</div>
+2. <div>{'\u00A9 2020'}</div>
+
+
+add comments in JSX
+--------------------
+
+
+{/* */}
+
+{//}
+
+Spread operator with jsx attributes
+-----------------------------------
+
+<Employee {...emp}/>
+
+how to loop in JSX:
+--------------------
+
+map()
+forEach()
+
+onclick="display()"
+
+summary:
+-------
+- webpack
+- JSX:
+  js in JSX
+  css in JSX
+  html in JSX
+  forms in JSX
+  auto escapes in JSX
+  how to loop in JSX
+  how to call functions in JSX
+  
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
