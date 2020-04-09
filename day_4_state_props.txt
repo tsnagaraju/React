@@ -1,0 +1,117 @@
+Day - 4:
+--------
+- component
+- state
+- props
+- state vs props
+- component communication
+
+Component:
+-----------
+- 2 ways to define component
+	- functional component
+	  function Home() {
+	    return (
+		 <div></div>
+		 }
+	  }
+	  
+	- class component
+	  class Hello extends Component {
+	    render() {
+		  return (
+		    <div></div>
+			)
+		}
+	   }
+
+- thrid way to define component using es5
+  React.createClass({
+    render() {
+	  return (
+	    <div></div>
+		)
+	}
+  })
+
+State:
+------
+- Stateless component
+- Stateful component
+- we can have in state in class component
+- all the class components are by default
+  stateful component
+
+- state in a component is just js object
+- state can be accessed by referencing
+  this.state.<<property_name>>
+  this.state.username
+
+- I want to modify state using
+  this.state.username = "Medapati, Sravan"
+- State muatation should be done using
+  setState()  
+- setState() makes our component re-rendered
+
+- class components are statefull
+- functional components are stateless
+  function MyApp() {
+  let state = {name:'nagaraju'}
+    return (
+	)
+	}
+
+input filed 
+button add
+
+- two array functions
+  1. pop()    : removes element from end default
+  2. splice() : removes element from the specified
+                index
+	 splice(startindex): remove all elements from
+	   specified index
+	 splice(startindex, count):
+				
+Props:
+======
+- props are used to pass data around our 
+  components
+- in class components, props are passed by default.
+  these props are accessible as this.props  
+
+- used to pass data down from parent to child
+  component
+- either holds data(it's own state) or recieves
+  data throgh it's props
+
+- we just add argument props to functional 
+  component 
+
+1. no value given to props use default props value 
+2. validating props
+
+- prop-types
+
+we can accept the following fundamental types:
+1. PropTypes.array
+2. PropTypes.bool
+3. PropTypes.func
+4. PropTypes.number
+5. PropTypes.object
+6. PropTypes.string
+
+- have a special prop 'children'.
+- contains value of anything that is passed
+  in the body of component.
+
+summary:
+--------
+- component
+- state
+  stateful 
+  stateless
+  functional
+  class
+- props
+  default props
+  prop types
