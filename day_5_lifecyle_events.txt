@@ -1,0 +1,113 @@
+Day - 5:
+--------
+- PropTypes
+- state vs props
+- presentational vs container components
+- component communication
+- events
+- lifecycle events
+
+PropTypes:
+----------
+PropTypes.array
+PropTypes.bool
+PropTypes.func
+PropTypes.number
+PropTypes.string
+PropTypes.object
+PropTypes.symbol
+
+- to accept one of two types
+  PropTypes.oneOfType([
+	PropTypes.string, PropTypes.number
+  ])
+- to accept one of many values
+  PropTypes.oneOf(['test1', 'test2', 'test3'])  
+  
+- to check or accept instance of class
+  PropTypes.instanceOf(anyojbect)
+- to accept any type
+  PropTypes.any  
+- to check array of data type 
+  PropTypes.arrayOf(PropTypes.number)
+
+State vs Props:
+---------------
+- state is initialized and managed by component
+  but props are  passed to child component
+  by its parent component
+  
+- props can be used in functional and class component
+  but state can be used only in class component
+  
+- props are read-only props that means child 
+  component can never change props value
+  
+- presentational components are concerned with
+  look and container components are concerned with
+  making things work.
+
+- presentational components get data through 
+  it's props, container component can have
+  state and business logic
+- product-list, it is container component 
+- product, as presentational component  
+
+Event:
+------
+- all events in react are camelCased
+- the methods of es6 classes by default are not
+  bound
+
+- Keyboard:
+  onKeyDown
+  onKeyUp
+  onKeyPress  
+  
+- onFocus
+- onBlur
+- onChange
+- onSubmit
+
+- onClick
+- onDoubleClick
+
+Lifecycle events:
+-----------------
+- 3 phases in react component life cycle
+  1. Mounting
+  2. Updating
+  3. Unmounting
+
+1. Mounting:
+------------
+constructor(): to set up our initial state
+getDerivedStateFromProps():
+render()
+componentDidMount()
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
