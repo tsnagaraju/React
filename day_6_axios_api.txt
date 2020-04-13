@@ -1,0 +1,111 @@
+Day - 6:
+--------
+- updating
+- unmounting
+- axios or fetch api
+
+Updating:
+---------
+- there are 5 life cycle methods
+  getDerivedStateFromProps()
+  shouldComponentUpdate()
+  render()
+  getSnapshotBeforeUpdate()
+  componentDidUpdate()
+  
+  shouldComponentUpdate(): returns a boolean
+  i.e. true or false
+  
+  render()
+  
+  getSnapshotBeforeUpdate():
+  
+  componentDidUpdate()
+  - when the component has been rendered in 
+    the DOM
+	
+- Unmounting:
+-------------
+- componentWillUnMount()
+  - is called when the component is removed
+    from the DOM
+
+componentWillMount, componentWillRecieveProps,
+componentWillUpdate these were deprecated 
+
+
+Fetch API or Axios API
+----------------------
+- to perform CRUD operations
+- C for Create(insert or add), R for Reading,
+  U for Update, D for Delete
+- Http methods
+  - GET, POST, PUT and DELETE 
+  
+- products.json
+  json-server products.json 
+  http://localhost:3000/products
+
+  GET http://localhost:3000/products all products
+  GET - read-only
+
+  POST http://localhost:3000/products 
+  object with id
+  
+  PUT http://localhost:3000/products/2 updating product 2
+  
+  DELETE http://localhost:3000/products/2 delete product 2
+  
+  POST, PUT and DELETE are write-only
+  
+  
+  IDEMPOTENT and NON-IDEMPOTENT
+  
+  GET http://localhost:3000/products all products
+  GET http://localhost:3000/products all products 
+  
+  PUT http://localhost:3000/products/2 there may be an update
+  PUT http://localhost:3000/products/2 noting to update
+  PUT http://localhost:3000/products/2 nothing to upate
+  
+  DELETE http://localhost:3000/products/2 given will be removed
+  DELETE http://localhost:3000/products/2 no records to delete
+  DELETE http://localhost:3000/products  no 
+  
+  IDEMPOTENT: GET, PUT and DELETE
+  NON-IDEMPOTENT: POST
+  
+  POST http://localhost:3000/products 1, obj
+  POST http://localhost:3000/products 2, obj
+  POST http://localhost:3000/products 3, obj
+  
+ > npm i -g json-server
+ 
+ > create-react-app <<project_folder>>
+ > cd <<projet_folder>>
+ > npm i --save axios
+  
+  
+  
+  
+  
+  
+  
+  
+  
+   
+
+
+
+
+
+
+
+
+
+
+
+	
+  
+  
+  
