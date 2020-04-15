@@ -1,0 +1,102 @@
+Day - 7:
+--------
+- features of routing in single page application
+  1. browser should change the URL when you 
+     navigate to different component
+  2. Deep linking
+  3. browser back and forward
+  
+> npm install --save react-router-dom 
+
+types of routes:
+----------------
+- BrowserRouter
+- HashRouter
+
+http://localhost:3000/home : browserrouter
+
+http://localhost:3000/#/home: hashrouter
+
+3 components:
+-------------
+- BrowserRouter
+- Link
+- Route
+
+BrowserRouter:
+--------------
+- import {BrowserRouter as Router} from 'react-router-dom'
+<Router>
+<div>
+<Link>
+<Route>
+</div>
+</Router>
+
+- BrowserRouter can only have one child
+
+
+Link:
+-----
+- is used to generate links 
+- is used trigger new routes
+- import {BrowserRouter as Router, Link} from 'react-router-dom'
+- to
+
+<Link to="/home"  >Home</Link>
+<Link to ="/about">About</Link>
+
+http://localhost:3000/Home
+
+http://localhost:3000/About
+
+Route:
+------
+- 
+
+
+http://localhost:3000/
+
+http://localhost:3000/home
+
+http://localhost:3000/contact
+
+http://localhost:3000/about
+
+
+www.facebook.com 
+
+www.gmail.com
+
+multiple paths:
+---------------
+- you can have a route respond to multiple paths
+  just using regex, because path can be a 
+  regex string
+  
+  <Route path="/(about|aboutus)"/>
+
+
+http://localhost:3000/aboutus
+
+
+http://localhost:3000/about
+
+inline rendering:
+------------------
+- instead of specifying a component on route, 
+  you can just use render 
+
+
+http://localhost:3000/contact/nagaraju
+
+match:
+params
+
+
+
+
+
+
+
+ 
