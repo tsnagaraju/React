@@ -1,0 +1,61 @@
+Day - 8:
+--------
+Fetch API vs Axios API
+-----------------------
+- fetch()
+  - fetch("http://localhost:3000/products")
+  - fetch("url", {
+      method: 'GET', // 'POST', 'PUT' or 'DELETE'
+	  body: json object
+	  headers: 
+    })
+- Response object properties:
+  ---------------------------
+  - response.body
+  - response.status
+  - response.statusText
+  - response.url
+  
+- response.json() parse response as json
+- response.text()
+
+Axios:
+------
+- http requests
+- features:
+  ----------
+  - automatically transform request and response
+    data
+  - built-in support for download progress
+  - cancel requests
+  
+- response.data 
+- response.status
+- response.statusText
+
+> axios
+> react-router-dom
+> bootstrap  
+- products.json
+
+Home
+table data
+update delete
+
+update	=> Update
+add		=> Add
+
+http://localhost:3001/update/2
+
+
+
+
+
+
+  
+
+
+
+
+
+  
