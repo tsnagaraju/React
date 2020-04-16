@@ -1,0 +1,138 @@
+Day - 9:
+--------
+- lazy loading
+- redux
+
+lazy loading:
+------------
+- lazy()
+- Suspense
+
+class Hello extends Component {
+  render() {
+    return ()
+  }
+}
+
+
+App:
+----
+//import Hello from './hello'
+
+const Hello = React.lazy(()=>import('./hello'))
+
+return (
+ <Hello/>
+)
+
+- load component of ths source file when it 
+  is needed
+- improves performance of app
+- impact on memory
+Redux:
+------
+- state manager
+- library
+> npm i --save redux
+> npm i --save react-redux
+
+- flux implementation
+
+Action:
+-------
+- js object
+- two properties
+  type
+  payload
+- action type can be defined as a string
+  type: 'add' or 'update' or 'delete'
+- action payload can be any type  
+  number
+  string
+  object 
+  boolean
+  
+function addProduct(product) {
+  return {
+    type: 'add',
+	payload: product
+  }
+}  
+  
+Reducer:
+--------
+- is a pure functions
+- input and returs output without changing input
+- action is fired, appliation state must change
+
+  reducer = (state = [], action)=>{
+    switch(action.type) {
+	case 'add':
+	return state;
+	case 'update':
+	return state;
+	case 'delete':
+	return state;
+	default:
+	return state;
+	}
+	}
+- updates state by combining previous state of
+   our appln and action value
+- returns updated state
+- we can have multiple reducers
+- let appreducer = combineReducers({cpr, apr})
+
+Store:
+------
+- global state 
+- it should be unique
+- holds the state of app
+- to expose the state we can use getState()
+- store can be created using createStore()
+- only store has access to the reducer   
+  
+  let store = createStore(reducer)
+  
+dispatch:
+---------
+- is a built in function used to dispatch
+  actions to the store
+  store.dispatch({type: 'delete', payload: 2})
+   
+   or
+   
+  store.dispatch(addProduct({id: 1, name: 'ap'}))
+  
+- sharing redux store to react app using
+  Provider component
+- Provider is from react-redux   
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
