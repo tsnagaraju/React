@@ -1,0 +1,72 @@
+Day - 10:
+---------
+- handling forms in react
+- reference a dom element
+- form validation using reatstrap or formik
+
+HTML forms:
+-----------
+- controlled components
+  - if the form data is handled by the components
+    then we call it as controlled comopnents
+- uncontrolled components
+  - if the form data is handled by DOM then we
+    call it as uncontrolled components
+	
+reference a dom element:
+-------------------------
+<p ref="para">Hello</p>
+
+this.refs.para.textContent
+
+<input type="text" ref="user"/>
+
+this.refs.user.value
+
+approach -1:
+============
+<input type="text" ref={(ele)=>this.user=ele}
+
+this.user.value
+
+<button ref={(ele)=>this.btn=ele}>Click</button>
+
+functional component:
+----------------------
+function app() {
+  let user;
+  return (
+  <div>
+  <input type="text" ref={(ele)=>user=ele}
+  user.value
+  
+approach -2:
+=============
+constructor() {
+  this.email = React.createRef()
+  }
+  
+<input type="text" ref={this.email}/>
+
+alert(this.email.current.value)
+
+FormValidation:
+---------------
+- form validation using react strap components
+> npm i --save reactstrap bootstrap
+- Form component from reactstrap
+  input		=> Input
+  form		=> Form
+  
+  Pascal Case - components or classes or interfaces
+  Camel Case  - properties or attributes or variables
+  
+
+- valid and invalid
+
+summary:
+--------
+- handle forms in react
+- ref in react forms
+- for validation using reactstrap
+
