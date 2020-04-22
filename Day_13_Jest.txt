@@ -1,0 +1,283 @@
+DAY - 11:
+=========
+Fragments
+Context API
+HOC
+Render props
+
+retrun (
+	<div>
+		<h1>Hello</h1>
+	</div>
+)
+
+Fragment:
+---------
+- avoid adding unnecessary div in the output
+  by using React.Fragment
+render() {
+        return (
+            <React.Fragment>
+                <h1>Fragment Demo</h1>
+                <p>avoid using unnecessary div in output</p>
+            </React.Fragment>
+        )
+    }
+	
+   or
+   
+  render() {
+        return (
+            <>
+                <h1>Fragment Demo</h1>
+                <p>avoid using unnecessary div in output</p>
+            </>
+        )
+    }
+
+context API:
+------------
+- pass state across the app without using props
+- avoid using redux
+- createCotext() returns context object
+- Provider, Consumer
+  
+  const [Provider, Consumer] = React.createContext()
+
+
+HOC:
+----
+- setTimeout(()=>{})
+- Array.sort((a, b)=>{})
+- Array.filter((s)=>{})
+- Array.map((p, i)=>{})
+
+- prepending a higher order component with the 
+  'with'
+
+- withButton
+- withLoading
+- withEmployee
+
+const withLoading = (Person)=>()=><Person/>
+
+const WrappedPerson = withLoading(Person)
+
+<WrappedPerson/>
+
+
+
+summary:
+-------
+fragment
+context api
+HOC
+
+
+Day - 12:
+----------
+Render props
+Hooks
+Styled components
+Render props:
+-------------
+- this.props.children
+- <parent name="hello">
+   <h1>lflds;kfjkl</h1>
+  </parent>
+
+- share state between components using children
+  prop
+
+class Parent {
+  constructor() {
+  this.state = {....}
+  render() {
+    return (
+	<div>{this.props.children}</div>
+	}
+  
+class Child {}
+
+<Parent>
+  <Child/>
+</Parent>
+
+- to share the state, we use render prop component
+- <Child name={this.state.name}/>
+
+Hooks:
+------
+- feature introduced in React 16.8
+- Hooks allow function components to have
+  state and to respond to lifecycle events
+- allow function components to handle events   
+
+access state:
+-------------
+- we use useState() to have state in function component
+- useState() accepts initial state and it returs
+  an array containing state variable and function
+  
+- objects are not allowed in function state
+
+access lifecycle:
+-----------------
+- allowing function components to have access to
+  the lifecycle events
+- useEffect() API accepts function as argument
+- useEffect() runs when the component is rendered
+- useEffect() is greate feature to access 3rd party
+  APIs
+  
+handle events in function components:
+-------------------------------------
+- useCallback()
+
+create custom hook:
+-------------------
+- const useData() {
+    return data;
+  }
+
+  const useData() {
+    return [user, setData];
+  }
+  
+summary:
+--------
+render props
+hooks
+
+Day - 13:
+=========
+styled components
+introduction to jest
+
+
+- we laid out pages using tables and frames
+- CSS 
+- Bootstrap CSS 
+- preprocessors
+  SASS
+  
+Styled Components:
+------------------
+- one of the new ways to use CSS in modern JS
+- scope of the css is to that component
+- no leak to any other element in the page
+- don't worry about class name collisions
+> npm install styled-components  
+# import styled from 'styled-components'
+- if i have any component and wants to use
+  same style then we use extend
+
+- styled(Button)``
+
+Introduction to Jest
+--------------------
+- is a library
+- to test JS code
+- open source and maintained by Facebook
+- very fast and easy to use
+- can perform snapshot testing
+- it is openionated 
+- Jest is similar to Mocha
+- npm install --save jest
+- file name is <<name>>.test.js
+- we use test('', ()=>{}) to write test case
+  to test any functionality
+- expect()
+- toBe()  
+
+Matchers:
+---------
+- toBe() compares strict equality ===
+  == and ===
+  7 == '7' true
+  7 === '7' false
+  
+- toEqual compares the values of two variables
+- toBeNull is true when passing null value
+- toBeDefined is true when passing a define value
+- toBeUndefined is true when passing undefined
+- toBeTruthy
+- toBeFalsy
+- toBeGreaterThan
+- toBeGreaterThanOrEqual
+- toBeLessThan
+- toBeLessThanOrEqual
+- toHaveLength(number)
+- toHaveProperty(key, value)
+- toBeInstanceOf(): to check the object is an 
+  instance of class
+
+- all matchers can be negated using .not
+  expect(sum(3, 4)).not.toBe(7)  
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
