@@ -1,0 +1,114 @@
+Redux:
+------
+- is a flux implementation 
+- redux, react-redux
+- routing & navigation -> react-router-dom
+> npm i --save redux react-redux react-router-dom
+
+Actions:
+--------
+- is js object 
+- this object has two properties
+  {
+	type: 'ADD'
+  }
+- type value can be a string or can be a constant
+  {
+   type: ADD_PRODUCT
+  }
+- 2nd property in action object is 
+  {
+	type: 'ADD',
+	payload: {}
+  }
+
+Reducer:
+--------
+- when an action is fired, then state of our app
+  must change
+- is a pure function 
+- takes input and returns output without changing
+  input 
+- returns new state by combining previous state of
+  our app and action value
+  let productreducer = (state, action) {
+   switch(action.type) {
+   case 'ADD'
+    // dosomething
+   case 'UPDATE':
+    // dosomething
+   case 'DELETE':
+    // dosomething
+   default:
+    return state
+ }	
+
+- we can have multiple reducers
+- let reducer = combineReducers({productreducer})
+ 
+Store:
+------ 
+- createStore()
+  store = createStore(reducer) 
+- store holds the state of our app
+- we can access store via getState()
+
+Dispatch:
+---------
+- dispatch is a function used to dispatch an
+  action
+- store.dispatch({type: 'ADD', payload: 2})  
+
+Higher order Components:
+------------------------
+- setTimeout(()=>{}, 3000)
+- map(()=>{})
+- filter(()=>{})
+- In react, we extend this concept to components
+  Higher Order Components
+- a component which access component as input
+  returns that component
+- withMyComponent 
+- const withMyComponent = App =>()=><App/>
+  
+Context API:
+------------
+- used to share to state accross the app
+- React.createContext() will return context
+  instance
+- we can have access to Provider, Consumer on this 
+  instance  
+- const {Provider, Consumer} = React.createContext()
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
